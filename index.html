@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEIN Product Reviewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 class="logo">SHEIN</h1>
+        <h1 class="animated-title">Get Paid to Review SHEIN Products!</h1>
+        <h1 id="typing-text"></h1>
+        <p class="subtitle">Join now and start earning shopping credits.</p>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card" data-link="https://glstrck.com/aff_c?offer_id=710&aff_id=52556">
+            <h2>1</h2>
+            <p>Complete a single questionnaire</p>
+        </div>
+        <div class="feature-card" data-link="https://glstrck.com/aff_c?offer_id=710&aff_id=52556">
+            <h2>2</h2>
+            <p>Enter your details & apply</p>
+        </div>
+        <div class="feature-card" data-link="https://glstrck.com/aff_c?offer_id=710&aff_id=52556">
+            <h2>3</h2>
+            <p>Get Shopping Credit</p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <a href="https://glstrck.com/aff_c?offer_id=710&aff_id=52556" target="_blank">
+            <button class="apply-btn">Apply Now</button>
+        </a>
+    </section>
+
+    <script>
+        // Typing Effect
+        const typingText = "Earn Rewards by Reviewing Fashion Items!";
+        let index = 0;
+
+        function typeEffect() {
+            if (index < typingText.length) {
+                document.getElementById("typing-text").innerHTML += typingText.charAt(index);
+                index++;
+                setTimeout(typeEffect, 50);
+            }
+        }
+
+        setTimeout(typeEffect, 1000);
+
+        // Click Sound Effect
+        function playClickSound() {
+            const clickSound = new Audio('click.mp3'); // Add a click sound file in your project
+            clickSound.play();
+        }
+
+        // Feature Cards Click Event
+        document.querySelectorAll(".feature-card").forEach(card => {
+            card.addEventListener("click", () => {
+                playClickSound();
+                window.open(card.getAttribute("data-link"), "_blank");
+            });
+        });
+
+        // Apply Button Click Event
+        document.querySelector(".apply-btn").addEventListener("click", () => {
+            playClickSound();
+        });
+    </script>
+
+</body>
+</html>
