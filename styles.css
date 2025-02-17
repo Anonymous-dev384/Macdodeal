@@ -54,7 +54,7 @@ body {
 }
 
 .apply-btn {
-width: 100%
+    width: 100%;
     background: #fff;
     color: #000;
     border: 2px solid #fff;
