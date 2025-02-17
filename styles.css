@@ -1,35 +1,27 @@
-/* General Styles */
+/* General Page Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #2C0E3A, #4A0078);
-    color: white;
-    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 /* Hero Section */
 .hero {
-    padding: 60px 20px;
     text-align: center;
-    position: relative;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #111, #000);
 }
 
-.logo {
-    width: 120px;
-    animation: fadeIn 1.5s ease-in-out;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
 }
 
 .animated-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
-    animation: floatText 2s ease-in-out infinite alternate;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    opacity: 0.8;
+    color: #ddd;
 }
 
 /* Features Section */
@@ -37,48 +29,53 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 50px 10px;
-    flex-wrap: wrap;
+    padding: 50px 20px;
 }
 
 .feature-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: #222;
+    color: #fff;
     padding: 20px;
-    width: 250px;
-    height: 150px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s ease-in-out;
-    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: scale(1.05);
+    background: #333;
 }
 
-/* Call to Action Button */
+/* Call to Action (CTA) */
+.cta {
+    text-align: center;
+    padding: 50px;
+}
+
 .apply-btn {
-width: 100%;
-    background: linear-gradient(to right, #6A00F4, #9F00FF);
+width: 100%
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
     padding: 15px 30px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 50px;
-    color: white;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.apply-btn:active {
-    transform: scale(0.9);
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .apply-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    background: #000;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Animations */
